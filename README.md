@@ -39,9 +39,3 @@ For solving this part of the challenge, I have used both of the provided dataset
 **Creating and training the model:**    
 I chose to use a Bidirectional LSTM because I get better results from it compared to a traditional LSTM. A Bidirectional LSTM model is an extension of the traditional LSTMs that can improve model performance on sequence classification problems. My initial experiments show that a Bidirectional LSTM with a CRF layer can produce better results compared to a simple unidirectional LSTM or a simple bidirectional-LSTM.  
 P.S: Inside my Jupyter notebook, I have added some comments to increase code readability.    
-
-**Results:**  
-While training the model, I didn’t get a validation accuracy more than 55% (even adding a dropout layer couldn’t prevent overfitting on the training set). To improve the results I changed the parameters, and I tried to use different variations of the LSTM model. However, neither of these attempts help me to increase the validation accuracy.  Although, in case of the precision, I get my best result from a bidirectional LSTM with a CRF model. But in summary, I would say my models do not perform significantly better than a random classifier.  
-There is a chance that I’m using bad parameters in my model (even after trying to obtain the best parameters in my experiments) but besides that the ideas that come to my mind that would increase the performance are:  
--	Combining a predictor and a classifier (i.e. predicting the features of the future events and using them as the input of a classifier)   
--	Better refining the input data and trying to detect and remove bad data and noises.   
